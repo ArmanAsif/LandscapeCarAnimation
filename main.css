@@ -1,0 +1,83 @@
+body {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: url("./images/background.jpg");
+	background-size: cover;
+	background-repeat: repeat-x;
+	overflow: hidden;
+	animation: bg-move 50s linear infinite;
+}
+
+@keyframes bg-move {
+	0% {
+		background-position: 0px;
+	}
+	100% {
+		background-position: 3396px;
+	}
+}
+
+.car-body {
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	width: 200px;
+	height: 60px;
+	background: url("./images/car.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: car-body 7s infinite linear;
+}
+
+@keyframes car-body {
+	0% {
+		right: -10%;
+	}
+	40% {
+		right: 50%;
+	}
+	100% {
+		right: 100%;
+	}
+}
+
+.wheel {
+	width: 30px;
+	height: 30px;
+	background: #111214;
+	border-radius: 50%;
+	animation: wheel 1.75s infinite linear;
+}
+
+@keyframes wheel {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.left-wheel {
+	position: absolute;
+	top: 50%;
+	left: 11%;
+}
+
+.right-wheel {
+	position: absolute;
+	top: 50%;
+	right: 14%;
+}
+
+.inner-rim {
+	position: absolute;
+	top: 12%;
+	left: 12%;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	border: 2px white dotted;
+}
